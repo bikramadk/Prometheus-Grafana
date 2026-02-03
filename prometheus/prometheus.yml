@@ -1,0 +1,32 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Apache servers (both old & new) under one job
+  - job_name: 'apache'
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - '${OLD_APACHE_HOST}:9117'  # old server
+          - '${NEW_APACHE_HOST}:9117'  # new server
+
+  # MySQL from old server
+  - job_name: 'mysql'
+    static_configs:
+      - targets: ['${OLD_MYSQL_HOST}:9104']
+
+  # Node Exporter from new server
+  - job_name: 'node'
+    static_configs:
+      - targets: ['${NEW_NODE_HOST}:9100']
+
+  # PostgreSQL from new server
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['${NEW_POSTGRES_HOST}:9187']

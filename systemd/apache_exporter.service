@@ -1,0 +1,15 @@
+[Unit]
+Description=Prometheus Apache Exporter
+After=network.target
+
+[Service]
+User=apache_exporter
+Group=apache_exporter
+ExecStart=/usr/local/bin/apache_exporter \
+--scrape_uri=http://localhost/server-status?auto
+
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
