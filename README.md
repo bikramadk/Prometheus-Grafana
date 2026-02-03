@@ -76,29 +76,6 @@ Dashboard examples are available in the `screenshots/` directory:
 4. **Regular backups** of Prometheus data and Grafana dashboards
 5. **Monitor the monitors** - ensure exporters are running
 
-## 🐛 Troubleshooting
-
-### Exporter not responding
-```bash
-# Check service status
-sudo systemctl status node_exporter
-
-# Check logs
-sudo journalctl -u node_exporter -f
-
-# Verify port is listening
-sudo netstat -tulpn | grep 9100
-```
-
-### Prometheus not scraping targets
-- Verify target is reachable: `curl http://target:port/metrics`
-- Check Prometheus logs for errors
-- Verify firewall rules allow connections
-
-### High memory usage
-- Adjust retention time: `--storage.tsdb.retention.time=15d`
-- Reduce scrape frequency for non-critical metrics
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please:
@@ -106,10 +83,6 @@ Contributions are welcome! Please:
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 📚 Resources
 
