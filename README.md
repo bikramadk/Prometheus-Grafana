@@ -97,9 +97,3 @@ Contributions are welcome! Please:
 
 Bikram Raj Adhikari
 
-## 🙏 Acknowledgments
-
-- Prometheus community for excellent monitoring tools
-- All exporter maintainers
-- Grafana team for visualization platform
-
