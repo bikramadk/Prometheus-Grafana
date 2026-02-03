@@ -2,7 +2,7 @@
 
 A comprehensive monitoring solution using Prometheus for metrics collection and Grafana for visualization, monitoring Apache, system metrics, PostgreSQL, and system metrics.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 prometheus-grafana/
@@ -17,7 +17,7 @@ prometheus-grafana/
     └── postgres_exporter.service
 ```
 
-## 🎯 Features
+## Features
 
 - **Multi-Server Monitoring**: Monitor both old and new server infrastructure
 - **Apache Monitoring**: Track Apache web server metrics and performance
@@ -25,7 +25,7 @@ prometheus-grafana/
 - **System Metrics**: CPU, memory, disk, and network monitoring via Node Exporter
 - **Grafana Dashboards**: Pre-configured visualization dashboards
 
-## 📊 Monitored Services
+##  Monitored Services
 
 | Service | Port | Description |
 |---------|------|-------------|
@@ -34,7 +34,7 @@ prometheus-grafana/
 | Node Exporter | 9100 | System and hardware metrics |
 | PostgreSQL Exporter | 9187 | PostgreSQL database metrics |
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -54,21 +54,21 @@ Each exporter has its own systemd service file in the `systemd/` directory. Cust
 - `node_exporter.service` - System metrics service
 - `postgres_exporter.service` - PostgreSQL monitoring service
 
-## 📸 Screenshots
+##  Screenshots
 
 Dashboard examples are available in the `screenshots/` directory:
 - Apache metrics dashboard
 - Node exporter system metrics
 - PostgreSQL performance metrics
 
-## 🔐 Security Considerations
+##  Security Considerations
 
 - **Firewall Rules**: Ensure only authorized IPs can access exporter ports
 - **Authentication**: Configure Prometheus basic auth or use a reverse proxy
 - **SSL/TLS**: Enable HTTPS for Grafana and Prometheus in production
 - **Secrets Management**: Never commit actual server IPs or credentials to Git
 
-## 📝 Monitoring Best Practices
+##  Monitoring Best Practices
 
 1. **Set appropriate scrape intervals** based on your needs (default: 15s)
 2. **Configure alerting rules** for critical metrics
@@ -76,7 +76,7 @@ Dashboard examples are available in the `screenshots/` directory:
 4. **Regular backups** of Prometheus data and Grafana dashboards
 5. **Monitor the monitors** - ensure exporters are running
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please:
 1. Fork the repository
@@ -84,7 +84,7 @@ Contributions are welcome! Please:
 3. Make your changes
 4. Submit a pull request
 
-## 📚 Resources
+##  Resources
 
 - [Prometheus Documentation](https://prometheus.io/docs/)
 - [Grafana Documentation](https://grafana.com/docs/)
@@ -93,7 +93,7 @@ Contributions are welcome! Please:
 - [MySQL Exporter](https://github.com/prometheus/mysqld_exporter)
 - [PostgreSQL Exporter](https://github.com/prometheus-community/postgres_exporter)
 
-## 👤 Author
+##  Author
 
 Bikram Raj Adhikari
 
